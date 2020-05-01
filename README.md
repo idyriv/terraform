@@ -12,7 +12,7 @@ export AWS_ACCESS_KEY_ID="xxxxxxxxxxxxxxxxx"
 export AWS_SECRET_ACCESS_KEY="yyyyyyyyyyyyyyyyyyyyyyyyyyyy"
 export AWS_DEFAULT_REGION="zzzzzzzzz"
 
-Terraform Commands
+Terraform Commands <br>
 
 terraform init
 terraform plan
