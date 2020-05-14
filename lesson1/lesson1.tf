@@ -4,8 +4,8 @@ provider "aws" {
   secret_key = ""
 }
 
-resource "aws_instance" "myServer1" {                    # nazva servera "myServer1"
-  count = 1                                              # ukazuem skilku xochem takux serveriv
+resource "aws_instance" "myServer1" {                    
+  count = 1                                              
   ami                    = "ami-0e38b48473ea57778"
   vpc_security_group_ids = [aws_security_group.DMZ.id]  #pruednuem security group do instansa imja yogo DMZ i yogo id
   instance_type          = "t2.micro"                   #["sg-f11111", "sg-f22222"] - mojem tak she dobavljaty securety group
@@ -46,7 +46,7 @@ ingress {
    protocol    = "tcp"
    cidr_blocks = ["0.0.0.0/0"]
  }
- egress {                               # vuxodjashuy trafic iz servera
+ egress {                              
    from_port   = 0
    to_port     = 0
    protocol    = "-1"                  # -1 to lubuy protokol dostypnuy
